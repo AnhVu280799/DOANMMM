@@ -7,7 +7,7 @@
     $tv_1=mysqli_query($conn,$tv);
     $tv_2=mysqli_fetch_array($tv_1);
     $so_trang=ceil($tv_2[0]/$so_du_lieu);
-  
+    //Them trang thai
     if(!isset($_GET['trang'])){$vtbd=0;}else{$vtbd=($_GET['trang']-1)*$so_du_lieu;}
   
     $tv="select id,ten,gia,hinh_anh,thuoc_menu from san_pham where thuoc_menu='$id' order by id desc limit $vtbd,$so_du_lieu";
