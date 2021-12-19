@@ -15,8 +15,8 @@
             }
         }
 
-        // $m_2=explode(" ",$chuoi_tim_sql);  
-        // $chuoi_tim_sql_2="";
+        $m_2=explode(" ",$chuoi_tim_sql);  
+        $chuoi_tim_sql_2="";
         for($i=0;$i<count($m_2)-1;$i++)
         {
             $chuoi_tim_sql_2=$chuoi_tim_sql_2.$m_2[$i]." ";
