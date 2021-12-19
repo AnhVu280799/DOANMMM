@@ -25,13 +25,13 @@
         $so_du_lieu=15;
         $tv="select count(*) from san_pham  where $chuoi_tim_sql_2";
         $tv_1=mysqli_query($conn,$tv);
-        // if (!$tv_1) {
-        //     printf("Error: %s\n", "Bạn không thể nhập từ khóa . Xin lỗi bạn ! (Em đã sửa lỗi thầy giao rồi ạ )");
-        //     exit();
-        // }
-        //$tv_2=$conn->prepare($tv);
-        //$tv_1->execute();
-        $tv_2=mysqli_fetch_array($tv_1);
+        if (!$tv_1) {
+            printf("Error: %s\n", "Bạn không thể nhập từ khóa )");
+            exit();
+        }
+        // $tv_2=$conn->prepare($tv);
+        // $tv_1->execute();
+        // $tv_2=mysqli_fetch_array($tv_1);
         
         $so_trang=ceil($tv_2[0]/$so_du_lieu);
        
